@@ -1,7 +1,13 @@
+{{#link-to 'active.new' tagName='button' class='btn btn-primary' id='newTeamBtn'}}Form new team{{/link-to}}
+
+{{outlet}}
+
 <h2>Teams in mission</h2>
 
-<ul>
-{{#each model as |mutant|}}
-<li>{{mutant.name}}</li>
-{{/each}}
-</ul>
+{{#if model.length}}
+  {{#each model as |team|}}
+    {{team-listing team=team}}
+  {{/each}}
+{{else}}
+  <p>No active teams.</p>
+{{/if}}

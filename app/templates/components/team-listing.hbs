@@ -1,0 +1,15 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    Team formed on {{team.created_at}}
+  </div>
+  <div class="panel-body">
+    <ul class="thumbnails image_picker_selector">
+    {{#each team.mutants as |mutant|}}
+      <li><div class="thumbnail">
+        <img src="{{mutant.image_url}}"/>
+        <p>{{mutant.name}}</p>
+      </div></li>
+    {{/each}}
+    </ul>
+  </div>
+</div>

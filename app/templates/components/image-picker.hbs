@@ -1,0 +1,6 @@
+{{yield}}
+<select multiple="multiple" class="image-picker">
+  {{#each choices as |choice|}}
+  <option data-img-src="{{choice.image_url}}" value="{{choice.id}}">{{choice.name}}</option>
+  {{/each}}
+</select>

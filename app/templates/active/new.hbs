@@ -1,0 +1,8 @@
+<h2>Form new team</h2>
+
+<form {{action 'createTeam' on='submit'}}>
+  {{#power-select-multiple options=model selected=mutant onchange=(action (mut mutant)) as |mutant|}}
+    <img src="{{mutant.image_url}}" class="icon"> {{mutant.name}}
+  {{/power-select-multiple}}
+  {{input type='submit' value='Form team' class='btn btn-primary'}}
+</form>

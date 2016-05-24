@@ -6,7 +6,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('active');
+  this.route('active', function() {
+    this.route('new');
+  });
   this.route('disbanded');
 });
 
